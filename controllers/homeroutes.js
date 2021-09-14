@@ -97,13 +97,12 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 });
 
 // TO DO: fix 
-router.get('/comments/', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     // call to database to get user's post they added in
-      const postData = await Post.findAll({
+      const postData = await Post.findOne({
         where: {
-          // user_id: req.session.user_id,
-          post_id: req.session.post_id
+          id: req.session.id
         },
       });
         const posts = postData.map((post) => post.get({ plain: true }));

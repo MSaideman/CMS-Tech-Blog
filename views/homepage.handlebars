@@ -2,7 +2,7 @@
 
     {{#each posts as |post|}}
     {{!-- check to see if this is correct formatting --}}
-    <a href="/comments/{{post.id}}">{{post.title}}</a>
+    <a href="/post/{{post.id}}">{{post.title}}</a>
     <p>{{post.content}}</p>
     <p>{{format_date post.date_created}}</p>
     <p>by: {{user.name}}</p>

@@ -27,7 +27,7 @@
     </div>
     <div class="comments">
       created by you on {{format_date post.date_created}} | 
-      <a href="/api/comments/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
     <button type="submit" id="comment-btn">save</button>
     <button type="button" id="delete-btn">delete post</button>
