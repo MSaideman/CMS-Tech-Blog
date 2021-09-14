@@ -1,0 +1,43 @@
+<div class="edit-form">
+  <form action="">
+    <div class="editContainer">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        placeholder="type title here"
+        value="{{post.title}}"
+        id="title"
+      />
+    </div>
+    <div class="editContainer">
+      <label for="content">Content</label>
+      <input
+        type="content"
+        placeholder="type content here"
+        value="{{post.content}}"
+        id="content"
+      />
+    </div>
+    <div class="comments">
+      {{#each this}}
+        <section>
+          <div class="meta">
+            {{user.username}}
+            on
+            {{format_date date_created}}
+          </div>
+          <div>
+            {{content}}
+          </div>
+        </section>
+      {{/each}}
+    </div>
+    <button type="submit" id="comment-btn">save</button>
+    <button type="button" id="delete-btn">delete post</button>
+  </form>
+  {{#each posts as |post|}}{{/each}}
+</div>
+
+<script src="/javascript/edit.js"></script>
+<script src="/javascript/delete.js"></script>
+<script src="/javascript/comment.js"></script>

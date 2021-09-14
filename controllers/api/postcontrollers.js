@@ -76,7 +76,8 @@ router.get('/', (req, res) => {
       });
   });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
+  console.log(req.body)
     Post.create({
       title: req.body.title,
       content: req.body.content,
@@ -89,7 +90,7 @@ router.post('/', withAuth, (req, res) => {
       });
 });
 
-router.put('/:id', withAuth, (req, res) => {
+router.put('/:id', (req, res) => {
     Post.update({
         title: req.body.title,
         content: req.body.content

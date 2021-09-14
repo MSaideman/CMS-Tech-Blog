@@ -1,8 +1,9 @@
-<h1>Welcome to Tech Blog</h1>
-
     {{#each posts as |post|}}
     <h1>{{post.title}}</h1>
     <p>{{post.content}}</p>
     <p>{{post.date_created}}</p>
     <p>Written By: {{user.name}}</p>
+    <a href="/dashboard/edit/{{post.id}}"><button >edit post</button></a>
     {{/each}}
+
+    <a href="/create">create new post</a>

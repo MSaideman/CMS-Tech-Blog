@@ -1,17 +1,16 @@
 // function to create post
 
-// function to login to page
-
 async function postForm(event) {
     event.preventDefault();
     const title = document.querySelector("#title").value
     const content = document.querySelector("#content").value
 
-        const response = await fetch('/api/users/login', {
+        const response = await fetch('/api/posts/', {
             method:"post",
+            headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({
-                title,
-                content
+                title: title,
+                content: content
             })
         })
         if (response.ok) {
@@ -21,4 +20,4 @@ async function postForm(event) {
         }
     }
 
-document.querySelector('.postBody').addEventListener('submit', loginForm);
+document.querySelector('.postBody').addEventListener('submit', postForm);

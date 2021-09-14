@@ -59,13 +59,16 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/users
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
+    console.log(req.body)
     User.create({
-        username: req.body.username,
-        password: req.body.password
+        name: req.body.username,
+        password: req.body.password,
+        email: req.body.email
     })
     // store user data during session 
     .then(dbUserData => {
+        console.log(dbUserData)
     req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
