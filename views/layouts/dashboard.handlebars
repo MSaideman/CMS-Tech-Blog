@@ -1,0 +1,4 @@
+    {{#each posts as |post|}}
+    {{> post-details}}
+    <a href="/dashboard/edit/{{post.id}}"><button >edit post</button></a>
+    {{/each}}
