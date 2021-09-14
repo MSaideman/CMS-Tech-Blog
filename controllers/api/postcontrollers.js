@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Post, User, Comments } = require('../../models');
 const sequelize = require('../../config/connection');
-const withAuth = require('../../utils/auth');
 
 // get all users
 router.get('/', (req, res) => {
@@ -113,7 +112,7 @@ router.put('/:id', (req, res) => {
       });
   });
 
-  router.delete('/:id', withAuth, (req, res) => {
+  router.delete('/:id', (req, res) => {
     Post.destroy({
       where: {
         id: req.params.id
