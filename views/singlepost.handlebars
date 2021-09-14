@@ -1,0 +1,31 @@
+<!-- displaying form and comments-->
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="content"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+  
+</form>
+{{/if}}
+
+<div>
+  {{#each this}}
+  <section>
+    <div>
+      {{user.name}} on {{format_date date_created}}
+    </div>
+    <div class="text">
+      {{content}}
+    </div>
+  </section>
+  {{/each}}
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
+

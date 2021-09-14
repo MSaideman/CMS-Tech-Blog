@@ -3,7 +3,6 @@
 async function commentForm(event) {
     event.preventDefault();
     const content = document.querySelector('textarea[name="content"]').value.trim();
-  
     const post_id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
@@ -28,4 +27,4 @@ async function commentForm(event) {
       }
 }
 
-document.querySelector('#comment-btn').addEventListener('submit', commentForm);
+document.querySelector('.comment-form').addEventListener('submit', commentForm);

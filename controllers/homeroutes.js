@@ -95,4 +95,24 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// TO DO: fix 
+router.get('/comments/', async (req, res) => {
+  try {
+    // call to database to get user's post they added in
+      const postData = await Post.findAll({
+        where: {
+          // user_id: req.session.user_id,
+          post_id: req.session.post_id
+        },
+      });
+        const posts = postData.map((post) => post.get({ plain: true }));
+    res.render('singlepost', {
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 module.exports = router;

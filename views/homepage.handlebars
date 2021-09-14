@@ -1,8 +1,9 @@
 <h1>Welcome to Tech Blog</h1>
 
     {{#each posts as |post|}}
-    <h1>{{post.title}}</h1>
+    {{!-- check to see if this is correct formatting --}}
+    <a href="/comments/{{post.id}}">{{post.title}}</a>
     <p>{{post.content}}</p>
-    <p>{{post.date_created}}</p>
-    <p>Written By: {{user.name}}</p>
+    <p>{{format_date post.date_created}}</p>
+    <p>by: {{user.name}}</p>
     {{/each}}
