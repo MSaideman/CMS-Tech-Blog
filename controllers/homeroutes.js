@@ -36,9 +36,9 @@ router.get("/login", async (req, res) => {
   }
 });
 
-router.get("/signup", async (req, res) => {
+router.get('/signup', async (req, res) => {
   try {
-    res.render("signup", {
+    res.render('signup', {
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -47,7 +47,7 @@ router.get("/signup", async (req, res) => {
   }
 });
 
-router.get("/dashboard", withAuth, async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // call to database to get user's post they added in
     const postData = await Post.findAll({
@@ -56,7 +56,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
       },
     });
     const posts = postData.map((post) => post.get({ plain: true }));
-    res.render("dashboard", {
+    res.render('dashboard', {
       posts,
       loggedIn: req.session.loggedIn,
     });
@@ -66,9 +66,9 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
-router.get("/create", withAuth, async (req, res) => {
+router.get('/create', withAuth, async (req, res) => {
   try {
-    res.render("create", {
+    res.render('create', {
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -77,7 +77,7 @@ router.get("/create", withAuth, async (req, res) => {
   }
 });
 
-router.get("/edit/:id", withAuth, async (req, res) => {
+router.get('/edit/:id', withAuth, async (req, res) => {
   try {
     // call to database to get user's post they added in
     const postData = await Post.findAll({
@@ -86,7 +86,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
       },
     });
     const posts = postData.map((post) => post.get({ plain: true }));
-    res.render("edit", {
+    res.render('edit', {
       posts,
       loggedIn: req.session.loggedIn,
     });

@@ -1,7 +1,7 @@
     {{#each posts as |post|}}
     <h1>{{post.title}}</h1>
     <p>{{post.content}}</p>
-    <a href="/dashboard/edit/{{post.id}}"><button >edit post</button></a>
+    <a href="/edit/{{post.id}}"><button >edit post</button></a>
     {{/each}}
 
     <a href="/create">create new post</a>

@@ -1,5 +1,10 @@
 <div class="edit-form">
+  {{#each posts as |post|}}
   <form action="">
+    <div>
+      <p>{{post.title}}</p>
+      <p>{{post.content}}</p>
+    </div>
     <div class="editContainer">
       <label for="title">Title</label>
       <input
@@ -7,6 +12,7 @@
         placeholder="type title here"
         value="{{post.title}}"
         id="title"
+        name="title"
       />
     </div>
     <div class="editContainer">
@@ -16,26 +22,17 @@
         placeholder="type content here"
         value="{{post.content}}"
         id="content"
+        name="content"
       />
     </div>
     <div class="comments">
-      {{#each this}}
-        <section>
-          <div class="meta">
-            {{user.username}}
-            on
-            {{format_date date_created}}
-          </div>
-          <div>
-            {{content}}
-          </div>
-        </section>
-      {{/each}}
+      created by you on {{format_date post.date_created}} | 
+      <a href="/api/comments/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
     <button type="submit" id="comment-btn">save</button>
     <button type="button" id="delete-btn">delete post</button>
   </form>
-  {{#each posts as |post|}}{{/each}}
+  {{/each}}
 </div>
 
 <script src="/javascript/edit.js"></script>
