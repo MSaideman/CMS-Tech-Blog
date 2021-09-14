@@ -1,8 +1,6 @@
     {{#each posts as |post|}}
     <h1>{{post.title}}</h1>
     <p>{{post.content}}</p>
-    <p>{{post.date_created}}</p>
-    <p>Written By: {{user.name}}</p>
     <a href="/dashboard/edit/{{post.id}}"><button >edit post</button></a>
     {{/each}}
 
