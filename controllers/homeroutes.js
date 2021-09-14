@@ -96,8 +96,20 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   }
 });
 
-// TO DO: fix 
+
 router.get('/post/:id', async (req, res) => {
+  try {
+    res.render('singlepost', {
+      loggedIn: req.session.loggedIn
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// update this function to show comments
+router.get('/comments/', async (req, res) => {
   try {
     res.render('singlepost', {
       loggedIn: req.session.loggedIn
