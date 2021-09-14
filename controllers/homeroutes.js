@@ -99,15 +99,8 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 // TO DO: fix 
 router.get('/post/:id', async (req, res) => {
   try {
-    // call to database to get user's post they added in
-      const postData = await Post.findOne({
-        where: {
-          id: req.session.id
-        },
-      });
-        const posts = postData.map((post) => post.get({ plain: true }));
     res.render('singlepost', {
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.loggedIn
     });
   } catch (err) {
     console.log(err);
