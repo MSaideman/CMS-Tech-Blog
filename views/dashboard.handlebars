@@ -1,11 +1,15 @@
-
-    {{#each posts as |post|}}
-    <div id="dashboard-structure" >
-    <div class="container m-4" id="post-content">
-    <a id= "post-title" href="/post/{{post.id}}">{{post.title}}</a>
-    <p id="content-info">{{post.content}}</p>
+{{#each posts as |post|}}
+  <div
+    id="card"
+    class="card mb-2 m-2 shadow-sm border-solid border-black border-8 rounded"
+  >
+    <div class="card-header m-2 pt-3">
+      <a id="post-title" href="/post/{{post.id}}">{{post.title}}</a>
     </div>
-    </div> 
-    <a href="/edit/{{post.id}}"><button >edit post</button></a>
-    <a href="/create">create new post</a>
-    {{/each}}
+    <div class="card-body">
+      <p id="content-info">{{post.content}}</p>
+    </div>
+  </div>
+  <a href="/edit/{{post.id}}"><button>edit post</button></a>
+  <a href="/create">create new post</a>
+{{/each}}

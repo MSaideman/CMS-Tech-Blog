@@ -1,10 +1,13 @@
 <div id="post-structure" class="bg-blue-800 p-6 m-8">
   {{#each posts as |post|}}
-    <div id = "card" class="card mb-2 m-2 shadow-sm border-solid border-black border-8 rounded">
+    <div
+      id="card"
+      class="card mb-2 m-2 shadow-sm border-solid border-black border-8 rounded"
+    >
       <div class="card-header m-2 pt-3">
         <a id="post-title" href="/post/{{post.id}}">{{post.title}}</a>
       </div>
-              <p id="content-info">{{post.content}}</p>
+      <p id="content-info">{{post.content}}</p>
       <div class="card-body">
         <p class="post-info">Date Posted:{{format_date post.date_created}}</p>
         <p class="post-info">Written by: {{user.name}}</p>
