@@ -1,3 +1,11 @@
+{{content}}
+
+{{comments.content}}
+
+{{post.content}}
+
+{{post.title}}
+
 <!-- displaying form and comments-->
 {{#if loggedIn}}
 <div class="card">
@@ -15,7 +23,6 @@
 </form>
 </div>
 {{/if}}
-<a href="/comments/{{post.id}}">{{post.content}}</a>
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>

@@ -111,7 +111,9 @@ router.get('/post/:id', async (req, res) => {
 // update this function to show comments
 router.get('/comments/', async (req, res) => {
   try {
+    const post = req.get({plain: true})
     res.render('singlepost', {
+      post,
       loggedIn: req.session.loggedIn
     });
   } catch (err) {
