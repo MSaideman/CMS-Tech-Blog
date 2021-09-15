@@ -2,7 +2,7 @@
 
 Deployed URL: https://msaideman.github.io/MVC/
 GitHub URL: https://github.com/MSaideman/MVC
-Heroku App: https://damp-hamlet-43234.herokuapp.com/
+Heroku App: https://murmuring-garden-59790.herokuapp.com/
 
 ## User Story
 
