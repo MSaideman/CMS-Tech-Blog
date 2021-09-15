@@ -1,8 +1,10 @@
+<div id="dashboard-structure" class="bg-blue-800 p-6 m-8">
     {{#each posts as |post|}}
+    <div class="container m-4">
     <h3>{{post.title}}</h3>
     <p>{{post.content}}</p>
+    </div>
+    </div> 
     <a href="/edit/{{post.id}}"><button >edit post</button></a>
-
-    {{/each}}
-
     <a href="/create">create new post</a>
+    {{/each}}

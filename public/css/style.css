@@ -1,3 +1,7 @@
+body {
+  background-color: #3d5a80;
+  color: #e0fbfc;
+}
 h1 {
   font-family: "Open Sans";
   font-size: 24px;
@@ -25,4 +29,38 @@ p {
 
 a {
   text-decoration: none;
+  font-family: "Open Sans";
+  font-size: 14px;
+  border-style: solid;
+  border-radius: 1em;
+  border-color: #293241;
+  background-color: #293241;
+  color: #e0fbfc;
+}
+
+button {
+  font-family: "Open Sans";
+  font-size: 14px;
+  border-style: solid;
+  border-radius: 1em;
+  border-color: #293241;
+  background-color: #293241;
+  color: #e0fbfc;
+}
+
+input,
+textarea {
+  background-color: #98c1d9;
+  font-family: "Open Sans";
+  border-radius: 1rem;
+}
+
+.edit-form {
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+
+.postBody {
+  font-family: "Open Sans";
+  font-size: 14px;
 }
