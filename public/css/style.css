@@ -98,3 +98,8 @@ textarea {
   display: flex;
   margin: 1rem;
 }
+
+#card {
+  border-color: #293241;
+  padding: 1rem;
+}
