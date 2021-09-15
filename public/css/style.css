@@ -64,3 +64,37 @@ textarea {
   font-family: "Open Sans";
   font-size: 14px;
 }
+
+#post-title {
+  background-color: #98c1d9;
+  color: #293241;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.post-info {
+  background-color: #e0fbfc;
+  color: #293241;
+  padding: 1rem;
+  max-width: 20rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+#content-info {
+  font-size: 1rem;
+  margin-left: 2rem;
+  padding-top: 1.5rem;
+}
+
+#user-info {
+  display: flex;
+  justify-content: start;
+  margin: 0.25rem;
+}
+
+#post-content {
+  display: flex;
+  margin: 1rem;
+}
