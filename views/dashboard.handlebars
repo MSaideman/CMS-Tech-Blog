@@ -1,3 +1,5 @@
+
+
 {{#each posts as |post|}}
   <div
     id="card"
@@ -12,6 +14,9 @@
   </div>
   <div class="pl-8">
   <a href="/edit/{{post.id}}"><button >edit post</button></a>
-  <a href="/create">create new post</a>
   </div>
 {{/each}}
+
+<div>
+  <a href="/create">create new post</a>
+</div>
