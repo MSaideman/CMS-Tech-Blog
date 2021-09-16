@@ -1,7 +1,6 @@
 # MVC
 
 Deployed URL: https://msaideman.github.io/MVC/
-GitHub URL: https://github.com/MSaideman/MVC
 Heroku App: https://murmuring-garden-59790.herokuapp.com/
 
 ## User Story
@@ -14,7 +13,19 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 ## Installation
 
+- mysql
+- dotenv
+- sequelize
+- express
+- express handlebars
+- express session
+- bcrypt
+
 ## Usage
+
+- mysql workbench
+- jawsdb
+- heroku
 
 ## License
 
