@@ -1,21 +1,20 @@
-{{post.comments}}
  <div
     id="card"
     class="card mb-2 m-2 shadow-sm border-solid border-black border-8 rounded m-8"
   >
     <div class="card-header m-2 pt-3">
-      <a id="post-title" href="/post/{{post.[0].id}}">{{posts.[0].title}}</a>
+      <a id="post-title" href="/post/{{post.id}}">{{post.title}}</a>
     </div>
     <div class="card-body">
-      <p id="content-info">{{posts.[0].content}}</p>
+      <p id="content-info">{{post.content}}</p>
     </div>
   </div>
   <div class="card-header m-8">
     <h1>comments</h1>
   </div>
   <div class="card-body m-10 shadow-sm border-solid border-4 rounded p-2">
-   <p>{{posts.[0].comments.[0].content}}</p> 
-   <p>{{format_date posts.[0].comments.[0].date_created}}</p>
+   <p>{{post.comments.content}}</p> 
+   <p>{{format_date date_created}}</p>
   </div>
 
 <!-- displaying form and comments-->
