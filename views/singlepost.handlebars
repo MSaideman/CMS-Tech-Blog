@@ -8,15 +8,17 @@
     <div class="card-body">
       <p id="content-info">{{post.content}}</p>
     </div>
+    <h4>created by: {{post.user.name}}</h4>
   </div>
   <div class="card-header m-8">
     <h1>comments</h1>
   </div>
+  {{#each post.comments as |comment|}}
   <div class="card-body m-10 shadow-sm border-solid border-4 rounded p-2">
-   <p>{{post.comments.content}}</p> 
-   <p>{{format_date date_created}}</p>
+   <p>{{comment.content}}</p> 
+   <p>{{format_date comment.date_created}}</p>
   </div>
-
+  {{/each}}
 <!-- displaying form and comments-->
 {{#if loggedIn}}
   <div class="card ">
@@ -39,3 +41,4 @@
 {{#if loggedIn}}
   <script src="/javascript/comment.js"></script>
 {{/if}}
+
